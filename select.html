@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fun() {
+                var val = document.getElementById("box1").value;
+                var op = document.getElementById("box2").getElementsByTagName("option");
+
+                if(val == 1) {
+                    document.getElementById("box2"). selectedIndex = "0"; 
+                for (var i = 0; i < op.length; i++) {
+                    if(op[i].value.toLowerCase() == "21")  {op[i].disabled = true;}
+                    if(op[i].value.toLowerCase() == "22")  {op[i].disabled = false;}
+                    }
+                }
+                if(val == 2) {
+                document.getElementById("box2"). selectedIndex = "0"; 
+                for (var i = 0; i < op.length; i++) {
+                    if(op[i].value.toLowerCase() == "21") {op[i].disabled = false;}
+                    if(op[i].value.toLowerCase() == "22")  {op[i].disabled = true;}
+                    }
+                }
+                if(val == 3) {
+                    document.getElementById("box2"). selectedIndex = "0"; 
+                for (var i = 0; i < op.length; i++) {
+                    if(op[i].value.toLowerCase() == "21") op[i].disabled = true;
+                    if(op[i].value.toLowerCase() == "22") op[i].disabled = true;
+                    if(op[i].value.toLowerCase() == "23") op[i].disabled = true;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <select id ="box1" onchange="fun();">
+            <option value ='-1'> Select option box 1</option>
+            <option value ="1">Test 1</option>
+            <option value ="2">Test 2</option>
+            <option value ="3">Test 3</option>
+        </select>
+        <select id ="box2">
+            <option value ='-1'> Select option box 2</option>
+            <option value ="21">Test 21</option>
+            <option value ="22">Test 22</option>
+            <option value ="23">Test 23</option>
+        </select>
+    </body>
+</html> 
